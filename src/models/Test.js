@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const TestSchema = mongoose.Schema({
-  title: String,
-  content: String
+  title: { type: String, trim: true, default: '' },
+  content: { type: String, trim: true, default: '' }
 });
 
 let Test = mongoose.model('Test', TestSchema);

@@ -14,7 +14,7 @@ function runServer(databaseUrl = PROD_URL, port = PORT) {
 				return reject(err);
 			}
 
-			server = app.listen(PORT, () => {
+			server = app.listen(port, () => {
 				console.log(`Server listening at http://localhost:${PORT}`);
 				resolve();
 			})
